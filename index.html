@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="./index.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: absolute;
+        bottom: 10px;
+        font-size: 12px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="cards">
+        <div class="card1">
+          <span class="toPlacedCvc">000</span>
+        </div>
+
+        <div class="card2">
+          <div class="circlegroup">
+            <div class="bigCircle"></div>
+            <div class="smallCircle"></div>
+          </div>
+
+          <span class="id toPlacedNumber"> 0000 0000 0000 0000 </span>
+
+          <div class="groupText">
+            <span class="toPlacedName">JANE APPLESEED</span>
+            <span
+              ><span class="toPlacedMonth">00</span>/<span class="toPlacedYear"
+                >00</span
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="formgroup">
+          <label for="Cardholder">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            id="Cardholder"
+            placeholder="e.g. Jane Appleseed"
+            required
+          />
+          <span class="errorName error"></span>
+        </div>
+        <div class="formgroup">
+          <label for="CardNumber">CARD NUMBER</label>
+          <input
+            type="number"
+            id="CardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            required
+          />
+          <span class="errorNumber error"></span>
+        </div>
+        <div class="twogroups">
+          <div class="subgroup">
+            <label>EXP. Date ( MM/YY )</label>
+            <div class="subsubgroup">
+              <input
+                type="number"
+                id="DateM"
+                placeholder="MM"
+                maxlength="2"
+                required
+              />
+              <input
+                type="number"
+                id="DateY"
+                placeholder="YY"
+                maxlength="2"
+                required
+              />
+            </div>
+            <span class="errorM error"></span>
+            <span class="errorY error"></span>
+          </div>
+          <div class="subgroup">
+            <label for="cvc">CVC</label>
+            <input
+              type="number"
+              id="cvc"
+              placeholder="e.g. 123"
+              maxlength="3"
+              required
+            />
+            <span class="errorCvc error"></span>
+          </div>
+        </div>
+        <input type="submit" value="Confirm" />
+      </form>
+
+      <div class="added" style="display: none;">
+        <img src="./images/icon-complete.svg" alt="icon-complete" />
+
+        <span class="thanks">THANK YOU!</span>
+
+        <p>We've added your card details</p>
+
+        <button class="continueBtn" onclick="continueAdd()">Continue</button>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Youngtechie</a>.
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
